@@ -1,8 +1,18 @@
 ## 0x09. Web infrastructu
+
 * I have be able to draw a diagram covering the web stack you built with the sysadmin/devops track project
 * I have  able to explain what each component is doing
 * able to explain system redundancy
 Know all the mentioned acronyms: LAMP, SPOF, QPS
+## Files
+
+<summary><a href="./0-simple_web_stack.jpg">0. Simple web stack</a></summary><br>
+
+<summary><a href="./1-distributed_web_infrastructure.jpg">1. Distributed web infrastructure</a></summary><br>
+
+<summary><a href="./2-secured_and_monitored_web_infrastructure.jpg">2. Secured and monitored web infrastructure</a></summary><br>
+
+<summary><a href="./3-scale_up.jpg">3. Scale up</a></summary><br>
 ### This project contains tasks for learning more about the different ways a web infrastructure could be designed for web development.
 # web stack
 mandatory
