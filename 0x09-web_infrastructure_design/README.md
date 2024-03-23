@@ -29,8 +29,28 @@ What is the role of the application server
 What is the role of the database
 What is the server using to communicate with the computer of the user requesting the website
 ## Designs Presented
+ Simple web stack 
+ Distributed web infrastructure 
+ Secured and monitored web infrastrucure 
+ Scaled up web infrastructure
+ Requirements:
 
-+ Simple web stack - [details](0-simple_web_stack.md)
-+ Distributed web infrastructure - [details](1-distributed_web_infrastructure.md)
-+ Secured and monitored web infrastrucure - [details](2-secured_and_monitored_web_infrastructure.md)
-+ Scaled up web infrastructure - [details](3-scale_up.md)
+You must add:
+3 firewalls
+1 SSL certificate to serve www.foobar.com over HTTPS
+3 monitoring clients (data collector for Sumologic or other monitoring services)
+You must be able to explain some specifics about this infrastructure:
+For every additional element, why you are adding it
+What are firewalls for
+Why is the traffic served over HTTPS
+What monitoring is used for
+How the monitoring tool is collecting data
+Explain what to do if you want to monitor your web server QPS
+You must be able to explain what the issues are with this infrastructure:
+Why terminating SSL at the load balancer level is an issue
+Why having only one MySQL server capable of accepting writes is an issue
+1 server
+1 load-balancer (HAproxy) configured as cluster with the other one
+Split components (web server, application server, database) with their own server
+You must be able to explain some specifics about this infrastructure:
+For every additional element, why you are adding it
