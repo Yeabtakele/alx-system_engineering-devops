@@ -1,7 +1,17 @@
-#!/usr/bin/env bash
-# Fix the server with the following commands to retrive 'Hello Holberton'
+#!/user/bin/env bash
+# Step 1: Create index.html file
+echo "Hello Holberton" > index.html
 
-sudo apt-get update 
-sudo apt-get upgrade
-sudo apt-get install apache2 apache2-doc apache2-utils
-sudo service apache2 start
+# Step 2: Create Dockerfile to configure Apache
+cat > Dockerfile <<EOF
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y apache2
+RUN echo 'Hello Holberton' > /var/www/html/index.html
+EXPOSE 80
+CMD ["apache2ctl", "-D", "FOREGROUND"]
+EOF
+
+# Step 3: Build Docker image
+docker build -t apache-holberton .
+
+# Step 4: Run Docker container
