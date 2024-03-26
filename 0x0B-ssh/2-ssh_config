@@ -1,0 +1,7 @@
+HOST *
+# Use the private key located at ~/.ssh/school
+IdentityFile ~/.ssh/school
+
+# Refuse password authentication
+PasswordAuthentication no
+
